@@ -1,0 +1,19 @@
+includes:
+    - ./vendor/nunomaduro/larastan/extension.neon
+    - ./vendor/phpstan/phpstan-mockery/extension.neon
+
+parameters:
+    paths:
+        - app
+
+    # The level 9 is the highest level
+    level: 9
+
+    ignoreErrors:
+    excludePaths:
+        - public
+
+    checkMissingIterableValueType: false
+    checkGenericClassInNonGenericObjectType: false
+
+    phpVersion: 80300
